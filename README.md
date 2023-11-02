@@ -44,5 +44,5 @@ Users can sign up, log in, create blogs, comment on blogs, and like comments.
 Configuration
 ### Configure email settings in settings.py for sharing blogs via email.
 
-Create .env file and create 'DJANGO_SECRET_KEY', 'EMAIL_HOST_USER' and 'EMAIL_HOST_PASSWORD' variables where 'EMAIL_HOST_USER' set your email id  and 'EMAIL_HOST_PASSWORD' enter your app password, needs to be defined.
+Create .env file and create'EMAIL_HOST_USER' and 'EMAIL_HOST_PASSWORD' variables where 'EMAIL_HOST_USER' set your email id  and 'EMAIL_HOST_PASSWORD' enter your app password.
 
