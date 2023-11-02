@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3 style="text-align:center;">Account Creation!</h3>
+    <div class="container">
+        <div class="card-body" style="width: min-content; margin-left: auto; margin-right: auto;">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.errors }}
+                {% if form.errors %}
+                    <div class="error alert alert-danger">
+                        {{ form.errors }}
+                    </div>
+                {% endif %} 
+                <!-- form with loop -->
+                {% for item in form %}           
+                    <p class="d-grid">{{ item }}</p>                       
+                {% endfor %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="messages {{message.tags}} alert alert-{{message.tags}}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <!-- <div class="g-recaptcha" data-sitekey="6Lf-VzwjAAAAAPn7RV2DLh4k67YSboDVulBEa6MU"></div> -->
+                <div class="d-grid gap-2">
+                    <button type="submit" class="d-grid gap-2 btn btn-outline-dark mt-3">Register</button>
+                </div>
+            </form>
+            <p style="margin-top: 1em;">Already have an account! <a href="/accounts/login" class="text-dark">Login</a></p>
+        </div>
+    </div>
+{% endblock %}
