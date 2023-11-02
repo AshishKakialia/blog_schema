@@ -22,6 +22,7 @@ def signup(request):
             user.set_password(password)
             user.save()
             print('user saved')
+            messages.success(request, 'Account created successfully')
             return redirect('/accounts/login')
         else:
             error = form.errors

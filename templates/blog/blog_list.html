@@ -12,26 +12,23 @@
     <div class="card" style="width: 18rem;">
       <ul class="list-group list-group-flush">
         {% for blog in blogs %}
-          
-          <li class="list-group-item"><h3><a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a></h3></li>
+          {% if blog %}
+            <li class="list-group-item"><h3><a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a></h3></li>
+          {% else %}
+            <h3> No blogs has added yet. Login to <a href="/admin">admin panel </a> and add blogs</h3>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>
-      <!-- <li>
-        
-        <p>{{ blog.content|safe }}</p>
-      </li> -->
     <div class="pagination">
         <span class="step-links">
             {% if blogs.has_previous %}
                 <a href="?page=1">&laquo; first</a>
                 <a href="?page={{ blogs.previous_page_number }}">previous</a>
             {% endif %}
-
             <span class="current-page">
                 Page {{ blogs.number }} of {{ blogs.paginator.num_pages }}.
             </span>
-
             {% if blogs.has_next %}
                 <a href="?page={{ blogs.next_page_number }}">next</a>
                 <a href="?page={{ blogs.paginator.num_pages }}">last &raquo;</a>

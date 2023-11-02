@@ -15,12 +15,9 @@ class SignupForm(forms.ModelForm):
 
     # Password match validator function
     def clean(self):
-        print('data = ', self)
         cleaned_data = super().clean()
         password = cleaned_data.get('password')
         confirm_password = cleaned_data.get('confirm_password')
-        print('cleaned_data = ',cleaned_data)
-        print(password, confirm_password)
         if password and confirm_password:
             if password != confirm_password:
                 return forms.ValidationError(
