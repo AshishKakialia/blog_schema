@@ -46,3 +46,7 @@ Configuration
 
 Create .env file and create'EMAIL_HOST_USER' and 'EMAIL_HOST_PASSWORD' variables where 'EMAIL_HOST_USER' set your email id  and 'EMAIL_HOST_PASSWORD' enter your app password.
 
+## NOTE: App password is required. click on the below link for steps to create an app password of email id if an account is in Gmail.
+https://support.google.com/mail/answer/185833?hl=en
+
+
