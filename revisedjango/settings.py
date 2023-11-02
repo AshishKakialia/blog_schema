@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / ".env") #here you indicate where your .env file is
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+SECRET_KEY = 'django-insecure-=$1&m%0av4t1j(nf2pe&s)n3le=(yi#&%*-!63&)_5)v0kxxo0'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
@@ -127,7 +127,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False 
 EMAIL_DEBUG = True
-# DEFAULT_FROM_EMAIL = 'akkiiikumar1996@gmail.com'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
